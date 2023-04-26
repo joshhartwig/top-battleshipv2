@@ -1,4 +1,5 @@
 import { ship } from './ship';
+import { utility } from './utility';
 
 export class board {
   grid: { ship: boolean; hit: boolean; miss: boolean; id: number }[]; // 2d array that represent our grid
@@ -38,6 +39,21 @@ export class board {
   }
 
   placeShip(id: number, length: number, orientation: number) {
-    return false;
+    if (
+      utility.validateGridLocation(
+        id,
+        length,
+        orientation,
+        this.rows * this.cols
+      )
+    ) {
+      // set each grid value to true
+      let locations = utility.range(id, length, orientation);
+      this.ships.push(new ship(locations)); // push to ships array
+      locations.forEach((e) => {
+        // set the grid values to true
+        this.grid[e].ship = true;
+      });
+    }
   }
 }

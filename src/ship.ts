@@ -2,8 +2,8 @@ export class ship {
   locations: number[];
   hits: number[];
 
-  constructor() {
-    this.locations = [];
+  constructor(locations: number[]) {
+    this.locations = locations;
     this.hits = [];
   }
 
