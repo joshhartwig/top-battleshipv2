@@ -8,10 +8,12 @@ class game {
         this.shipLimit = shipLimit;
         this.player = new player_1.player();
         this.ai = new player_1.player();
-        this.ui = new ui_1.ui();
+        this.ui = new ui_1.ui('introId', 'placementId', 'battleId', 'gameoverId', 'placementBoardId', 'playerBoardId', 'aiBoardId');
         this.startButton = document.getElementById('startBtnId');
-        this.playButton = document.getElementById('palyBtnId');
+        this.playButton = document.getElementById('playBtnId');
         this.nameInput = document.getElementById('nameInputId');
+        this.ui.createBoard('placementBoardId', 'player', this.player.board.grid);
+        this.start();
     }
     start() {
         this.ui.showIntro();

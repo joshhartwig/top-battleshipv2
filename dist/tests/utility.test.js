@@ -33,5 +33,6 @@ test('validateGridLocation: test if vertical placement returns false for imprope
 });
 test('random: test if random returns a number in correct range', () => {
     const t = utility_1.utility.random(1, 5);
-    expect(t).toBe(1 || 2 || 3 || 4 || 5);
+    expect(t).not.toBeUndefined();
+    expect([1, 2, 3, 4, 5]).toContain(t);
 });

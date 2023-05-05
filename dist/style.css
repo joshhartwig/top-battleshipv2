@@ -1,0 +1,23 @@
+/* ------- cell ------- */
+
+.cell {
+  position: relative;
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+}
+
+.placementButtonShip {
+  border: 1px solid black;
+  width: 25px;
+  height: 25px;
+  background-color: black;
+}
+
+/* ------- placement ------- */
+
+.placement-grid {
+  display: inline-grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(10,25px);
+}

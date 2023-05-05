@@ -51,7 +51,6 @@ export class board {
       let locations = utility.range(id, length, orientation);
       this.ships.push(new ship(locations)); // push to ships array
       locations.forEach((e) => {
-        // set the grid values to true
         this.grid[e].ship = true;
       });
     }

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <script src="index.js" type="module" defer></script>
   <title>Battleship</title>
 </head>
@@ -12,30 +13,51 @@
     <p class="title">Battleship</p>
   </div>
 
-  <div class="intro">
+  <div class="intro" id="introId">
     <p class="intro-para">Welcome to Battleship</p>
     <input name="nameTxt" type="text" maxlength="48" id="nameInputId" class="nameInput"/>
     <button class="startBtn" id="startBtnId">Start</button>
   </div>
 
-  <div class="placement">
-    <div class="placement-grid"></div>
+  <div class="placement" id="placementId">
+    <div class="placement-grid" id="placementBoardId"></div>
     
-    <div class="ship-controls">
-      <div class="ship-control-btn1">x x x x x</div>
-      <div class="ship-control-btn2">x x x x</div>
-      <div class="ship-control-btn3">x x x</div>
-      <div class="ship-control-btn4">x x</div>
+    <div class="ship-controls" id="shipControlId">
+      <button class="shipPlacement" id="shipPlacement5Id">
+        <div class="placementButtonShip"></div>
+        <div class="placementButtonShip"></div>
+        <div class="placementButtonShip"></div>
+        <div class="placementButtonShip"></div>
+        <div class="placementButtonShip"></div>
+      </button>
+      
+      <button class="shipPlacement" id="shipPlacement4Id">
+        <div class="placementButtonShip"></div>
+        <div class="placementButtonShip"></div>
+        <div class="placementButtonShip"></div>
+        <div class="placementButtonShip"></div>
+      </button>
+
+      <button class="shipPlacement" id="shipPlacement3Id">
+        <div class="placementButtonShip"></div>
+        <div class="placementButtonShip"></div>
+        <div class="placementButtonShip"></div>
+      </button>
+
+      <button class="shipPlacement" id="shipPlacement2Id">
+        <div class="placementButtonShip"></div>
+        <div class="placementButtonShip"></div>
+      </button>
     </div>
 
   </div>
 
-  <div class="battle">
-    <div class="ai-grid"></div>
-    <div class="player-grid"></div>
+  <div class="battle" id="battleId">
+    <div class="ai-grid" id="aiBoardId"></div>
+    <div class="player-grid" id="playerBoardId"></div>
   </div>
 
-  <div class="over"></div>
+  <div class="over" id="gameoverId"></div>
   
 </body>
 </html>
